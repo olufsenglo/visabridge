@@ -15,7 +15,8 @@ const Navbar = () => {
         <Link to="/user/dashboard">
           Log out
         </Link>
-        <Link to="/user/dashboard">
+        {' '}
+        <Link to="/login">
           Log in
         </Link>      
     </div>
