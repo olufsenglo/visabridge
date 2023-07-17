@@ -26,19 +26,19 @@ const validationSchema = yup.object({
 
 const LogIn = () => {
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
-    // const { isAuthenticated, userInfo } = useSelector(state => state.signIn);
-    // useEffect(() => {
+    const navigate = useNavigate();
+    const { loading, isAuthenticated, userInfo } = useSelector(state => state.signIn);
+    useEffect(() => {
 
-    //     if (isAuthenticated) {
-    //         if (userInfo.role === 'admin') {
-    //             navigate('/admin/dashboard');
-    //         } else {
-    //             navigate('/user/dashboard');
-    //         }
-    //     }
+        if (isAuthenticated) {
+            if (userInfo.role === 'admin') {
+                navigate('/admin/dashboard');
+            } else {
+                navigate('/user/dashboard');
+            }
+        }
 
-    // }, [isAuthenticated])
+    }, [isAuthenticated])
 
     const formik = useFormik({
         initialValues: {
@@ -112,7 +112,7 @@ const LogIn = () => {
                             helperText={formik.touched.password && formik.errors.password}
                         />
 
-                        <Button fullWidth variant="contained" type='submit' >Log In</Button>
+                        <Button disabled={loading} fullWidth variant="contained" type='submit' >{loading ? "Loading" : "Log In"}</Button>
                     </Box>
                 </Box>
             </Box>
