@@ -1,31 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../elite_edge/Header';
 import Footer from '../elite_edge/Footer';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+// import { useFormik } from 'formik';
+// import * as yup from 'yup';
 
-const validationSchema = yup.object({
-  name: yup
-      .string('Enter your name')
-      .name('Enter a valid name')
-      .required('Name is required'),
-  email: yup
-      .string('Enter your email')
-      .email('Enter a valid email')
-      .required('Email is required'),
-  phone: yup
-      .string('Enter your phone')
-      .phone('Enter a valid phone')
-      .required('phone is required'),            
-  country: yup
-      .string('Enter your country')
-      .country('Enter a valid country')
-      .required('country is required'),
-  course: yup
-    .string('Enter your course')
-    .course('Enter a valid course')
-    .required('course is required'),
-});
+// const validationSchema = yup.object({
+//   name: yup
+//       .string('Enter your name')
+//       .name('Enter a valid name')
+//       .required('Name is required'),
+//   email: yup
+//       .string('Enter your email')
+//       .email('Enter a valid email')
+//       .required('Email is required'),
+//   phone: yup
+//       .string('Enter your phone')
+//       .phone('Enter a valid phone')
+//       .required('phone is required'),            
+//   country: yup
+//       .string('Enter your country')
+//       .country('Enter a valid country')
+//       .required('country is required'),
+//   course: yup
+//     .string('Enter your course')
+//     .course('Enter a valid course')
+//     .required('course is required'),
+// });
 
 const Request = () => {
   return (
