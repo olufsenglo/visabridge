@@ -49,7 +49,7 @@ const LogIn = () => {
         onSubmit: (values, actions) => {
             //  alert(JSON.stringify(values, null, 2));
             dispatch(userSignInAction(values));
-            actions.resetForm();
+            // actions.resetForm();
         }
 
     })
@@ -113,7 +113,7 @@ const LogIn = () => {
                             helperText={formik.touched.password && formik.errors.password}
                         />
 
-                        <Button disabled={loading} fullWidth variant="contained" type='submit' >{loading ? "Loading" : "Log In"}</Button>
+                        <Button disabled={loading} fullWidth variant="contained" type='submit' >{loading ? "Logging In..." : "Log In"}</Button>
                     </Box>
                 </Box>
             </Box>
