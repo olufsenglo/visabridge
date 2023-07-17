@@ -21,7 +21,7 @@ const AdminDashboard = () => {
     dispatch(userLogoutAction());
     // window.location.reload(true);
     // setTimeout(() => {
-        // navigate('/login');
+        navigate('/');
     // }, 500)
   }
 
