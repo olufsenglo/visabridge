@@ -18,11 +18,11 @@ const AdminDashboard = () => {
   
   //log out 
   const logOut = () => {
-    dispatch(userLogoutAction());
-    window.location.reload(true);
-    setTimeout(() => {
-        navigate('/login');
-    }, 500)
+    // dispatch(userLogoutAction());
+    // window.location.reload(true);
+    // setTimeout(() => {
+    //     navigate('/login');
+    // }, 500)
   }
 
   return (
