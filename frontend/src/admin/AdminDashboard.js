@@ -18,10 +18,10 @@ const AdminDashboard = () => {
   
   //log out 
   const logOut = () => {
-    // dispatch(userLogoutAction());
+    dispatch(userLogoutAction());
     // window.location.reload(true);
     // setTimeout(() => {
-    //     navigate('/login');
+        navigate('/login');
     // }, 500)
   }
 
