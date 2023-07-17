@@ -32,9 +32,11 @@ const LogIn = () => {
 
         if (isAuthenticated) {
             if (userInfo.role === 'admin') {
-                navigate('/admin/dashboard');
+                navigate('/login');
+                // navigate('/admin/dashboard');
             } else {
-                navigate('/user/dashboard');
+                navigate('/login');
+                // navigate('/user/dashboard');
             }
         }
 
