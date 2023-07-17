@@ -29,7 +29,7 @@ import Footer from '../elite_edge/Footer';
 
 const Request = () => {
   return (
-    <div>
+    <div className="py-12">
       <Header />
       <section className="section-sm lg:pt-[50px] lg:pb-[50px]">
         <div className="container mx-auto">
@@ -47,27 +47,27 @@ const Request = () => {
               >
               
               <input
-                className="form-control p-2 rounded-xl border"
+                className="form-control p-2 rounded-xl text-xl font-light"
                 type="text"
                 placeholder="Name"
               />
               <input
-                className="form-control p-2 rounded-xl border"
+                className="form-control p-2 rounded-xl text-xl font-light"
                 type="text"
                 placeholder="Email"
               />
               <input
-                className="form-control p-2 rounded-xl border"
+                className="form-control p-2 rounded-xl text-xl font-light"
                 type="text"
                 placeholder="Phone number"
               />
               <input
-                className="form-control p-2 rounded-xl border"
+                className="form-control p-2 rounded-xl text-xl font-light"
                 type="text"
                 placeholder="Country of Residence"
               />
               <input
-                className="form-control p-2 rounded-xl border"
+                className="form-control p-2 rounded-xl text-xl font-light"
                 type="text"
                 placeholder="Course of study"
               />

@@ -4,21 +4,9 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
   return (
     <div>
-        <Link to="/admin/dashboard">
-          Admin
-        </Link>
-        {' '}
-        <Link to="/user/dashboard">
-          User
-        </Link>
-        {' '}
-        <Link to="/user/dashboard">
-          Log out
-        </Link>
-        {' '}
-        <Link to="/login">
-          Log in
-        </Link>      
+        <Link to="/">
+          Back Home
+        </Link> 
     </div>
   )
 }

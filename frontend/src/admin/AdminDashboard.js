@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogoutAction, userProfileAction } from '../redux/actions/userAction';
 import { useNavigate } from 'react-router-dom';
 
-const AdminDashboard = () => {
+import profileImg from '../assets/img/profile.jpg';
 
+const AdminDashboard = () => {
+  const [ darkMode, setDarkMode ] = useState(false);
+  const [ closeSidebar, setCloseSidebar ] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();	
   
   useEffect(() => {
-  dispatch(userProfileAction());
+    dispatch(userProfileAction());
   }, []);
   
   //log out 
@@ -23,8 +26,8 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="visa">
-      <nav className="">
+    <div className={`visa ${darkMode ? 'dark' : ''}`}>
+      <nav className={`${closeSidebar ? 'close' : ''}`}>
         <div className="logo-name">
           <div className="logo-image">
             logo
@@ -62,10 +65,10 @@ const AdminDashboard = () => {
             </li>
           </ul>
           <ul className="logout-mode">
-            <li>
+            <li onClick={logOut}>
               <Link to="#">
                 <i className="uil uil-signout"></i>
-                <span onClick={logOut} className="link-name">Logout</span>
+                <span className="link-name">Logout</span>
               </Link>
             </li>
 
@@ -75,7 +78,7 @@ const AdminDashboard = () => {
                 <span className="link-name">Dark Mode</span>
               </a>
 
-              <div className="mode-toggle">
+              <div onClick={() => setDarkMode(!darkMode)} className="mode-toggle">
                 <span className="switch"></span>
               </div>
             </li>
@@ -85,11 +88,15 @@ const AdminDashboard = () => {
 
       <section className="dashboard">
         <div className="top">
-          <i className="uil uil-bars sidebar-toggle"></i>
+          <i onClick={() => setCloseSidebar(!closeSidebar)} className="uil uil-bars sidebar-toggle"></i>
 
           <div className="search-box">
             <i className="uil uil-search"></i>
             <input type="text" placeholder="Search..." />
+          </div>
+
+          <div className="top-profile">
+            <img src={profileImg} alt="profile" />
           </div>
         </div>
       

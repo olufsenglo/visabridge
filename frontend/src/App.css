@@ -221,7 +221,7 @@ body.dark .nav-links li a:hover .link-name {
   transition: var(--tran-03);
 }
 
-body.dark .switch::before {
+.visa.dark .switch::before {
   left: 20px;
 }
 
@@ -268,8 +268,42 @@ body.dark .switch::before {
   position: relative;
   height: 45px;
   max-width: 600px;
-  width: 100%;
+  width: 60%;
   margin: 0 30px;
+}
+
+.top .search-box input {
+  position: absolute;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  padding: 0 25px 0 50px;
+  height: 100%;
+  width: 100%;
+  border-radius: 4rem;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+}
+
+.top .search-box i {
+  position: absolute;
+  left: 15px;
+  font-size: 22px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--black-light-color);
+}
+
+.top-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboard .dash-content {

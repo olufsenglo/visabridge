@@ -58,13 +58,14 @@ const LogIn = () => {
         <>
             <Navbar />
             <Box sx={{ height: '81vh', display: "flex", alignItems: "center", justifyContent: "center", bgcolor: "primary.white" }}>
-
-
                 <Box onSubmit={formik.handleSubmit} component="form" className='form_style border-style' >
                     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>
                         <Avatar sx={{ m: 1, bgcolor: "primary.main", mb: 3 }}>
                             <LockClockOutlined />
                         </Avatar>
+                        <p>username: j@a.com</p>
+                        <p>password: pass123</p>
+                        <br />
                         <TextField
                             sx={{
                                 mb: 3,
@@ -116,7 +117,6 @@ const LogIn = () => {
                     </Box>
                 </Box>
             </Box>
-            <Footer />
         </>
     )
 }

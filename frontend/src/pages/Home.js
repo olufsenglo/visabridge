@@ -29,11 +29,6 @@ const Home = () => {
       <Testimonials />
       <CtaSection />
       <Footer />
-
-      <Navbar />
-      <h1>Home</h1>
-      <PostCard />
-      <Foota />
     </div>
   )
 }
