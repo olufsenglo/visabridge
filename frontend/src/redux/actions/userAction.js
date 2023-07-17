@@ -20,7 +20,7 @@ import {
 export const userSignInAction = (user) => async (dispatch) => {
     dispatch({ type: USER_SIGNIN_REQUEST });
     try {
-        const { data } = await axios.post("/api/signin", user);
+        const { data } = await axios.post("https://elitevisa.onrender.com/api/signin", user);
         localStorage.setItem('userInfo', JSON.stringify(data));
         dispatch({
             type: USER_SIGNIN_SUCCESS,
@@ -40,7 +40,7 @@ export const userSignInAction = (user) => async (dispatch) => {
 export const userSignUpAction = (user) => async (dispatch) => {
     dispatch({ type: USER_SIGNUP_REQUEST });
     try {
-        const { data } = await axios.post("/api/signup", user);
+        const { data } = await axios.post("https://elitevisa.onrender.com/api/signup", user);
 
         dispatch({
             type: USER_SIGNUP_SUCCESS,
@@ -61,7 +61,7 @@ export const userLogoutAction = () => async (dispatch) => {
     dispatch({ type: USER_LOGOUT_REQUEST });
     try {
         localStorage.removeItem('userInfo');
-        const { data } = await axios.get("/api/logout");
+        const { data } = await axios.get("https://elitevisa.onrender.com/api/logout");
         dispatch({
             type: USER_LOGOUT_SUCCESS,
             payload: data
@@ -81,7 +81,7 @@ export const userLogoutAction = () => async (dispatch) => {
 export const userProfileAction = () => async (dispatch) => {
     dispatch({ type: USER_LOAD_REQUEST });
     try {
-        const { data } = await axios.get("/api/me");
+        const { data } = await axios.get("https://elitevisa.onrender.com/api/me");
         dispatch({
             type: USER_LOAD_SUCCESS,
             payload: data
